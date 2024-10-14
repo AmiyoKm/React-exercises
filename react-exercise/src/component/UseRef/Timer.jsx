@@ -8,10 +8,7 @@ const Timer = () => {
     const timerRef = useRef(0);
 
     useEffect(() => {
-      timerRef.current = setInterval(()=>{
-        setCount(c=>c+1);
-      },1000)
-    
+        
       return () => {
        clearInterval(timerRef.current)
       }
@@ -19,14 +16,17 @@ const Timer = () => {
 
     const handleTimer = () => {
       
-      clearInterval(timerRef.current);
-        if(isRunning){
+      
+        if(!isRunning){
             timerRef.current = setInterval(()=>{
                 setCount(c=>c+1);
               },1000)
+
+             
         }
         else{
             clearInterval(timerRef.current)
+           
         }
         setIsRunning(!isRunning)
 
@@ -36,7 +36,7 @@ const Timer = () => {
   return (
     <div>
         <h1>Timer: {count}s</h1>
-        <button onClick={handleTimer}>Stop</button>
+        <button className="border-2 bg-slate-600 text-white"onClick={handleTimer}>{!isRunning? "start" : "stop"}</button>
 
     </div>
   )
