@@ -5,7 +5,9 @@ import Counter from './component/UseReducer/Counter'
 import Reffing from './component/UseRef'
 import FocusInput from './component/UseRef/focusInput'
 import Timer from './component/UseRef/Timer'
+import Accordion from './mini-projects/Accordion/Accordion'
 import Calculator from './mini-projects/calculator/Caculator'
+import Form from './mini-projects/form validation/Form'
 import HiddenSearchBar from './mini-projects/Hidden Search Bar/HidderSearchbar'
 import Meals from './mini-projects/Meals/Meals'
 import Testimonials from './mini-projects/testimonial/Testimonials'
@@ -27,8 +29,9 @@ function App() {
       {/*  <Calculator/> */}
       {/* <ToggleBg/> */}
       {/* <HiddenSearchBar /> */}
-      <Testimonials/>
-
+      {/* <Testimonials/> */}
+      {/* <Accordion /> */}
+      <Form/>
     </>
   )
 }
